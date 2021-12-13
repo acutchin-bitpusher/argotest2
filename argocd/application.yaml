@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: github.com/acutchin-bitpusher/argotest.git
+    repoURL: https://github.com/acutchin-bitpusher/argotest.git
     targetRevision: HEAD
     path: .
   destination: 
