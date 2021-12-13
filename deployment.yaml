@@ -14,7 +14,7 @@ spec:
         app: argotest2
     spec:
       containers:
-      - image: acutchinbitpusher/actest:0.0.34
+      - image: acutchinbitpusher/actest:0.0.35
         imagePullPolicy: Always
         name: argotest2
         ports:
