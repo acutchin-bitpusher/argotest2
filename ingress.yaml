@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argotest2
+  namespace: argotest2
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    external-dns.alpha.kubernetes.io/hostname: argotest2.bp3.built-bp-dev.com
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+  labels:
+    app: argotest2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: argotest2
+                port:
+                  number: 80
